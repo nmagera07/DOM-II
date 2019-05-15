@@ -2,10 +2,13 @@
 const nav = document.querySelector('.nav');
 nav.addEventListener('mouseover', (event) => {
     event.target.style.color = "Cyan";
-    event.preventDefault()
+    
 })
 nav.addEventListener('mouseout', (event) => {
     event.target.style.color = "black"
+})
+nav.addEventListener('click', event => {
+    event.preventDefault();
 })
 
 const nodeList = document.querySelectorAll('img')
@@ -52,7 +55,9 @@ textContent.addEventListener('click', event => {
 const footerContent = document.querySelector('footer')
 footerContent.addEventListener('mouseenter', event => {
     event.target.style.backgroundColor = "white"
+    event.stopPropagation
 })
 footerContent.addEventListener('mouseleave', event => {
     event.target.style.backgroundColor = "#FFEBCD"
 })
+
